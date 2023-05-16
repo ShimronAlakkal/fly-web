@@ -27,7 +27,7 @@ app.post("/contact.html", (req, res) => {
     from: req.body.emaily,
     to: process.env.EMAIL,
     subject: `Message from ${req.body.emaily}: ${req.body.subject}`,
-    text: req.body.message,
+    text: `From: ${req.body.fname} ${req.body.lname}\nMessage:\n${req.body.message}`,
   };
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
