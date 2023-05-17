@@ -10,10 +10,10 @@ newsLetter.addEventListener("submit", (e) => {
   xhr.onload = function () {
     console.log(xhr.responseText);
     if (xhr.responseText == "success") {
-      alert("Signed up for newsletter!");
+      alert("You'll hear from us SOON!!");
       email.value = "";
     } else {
-      alert("Something went wrong!");
+      alert("Yowza!! Something went wrong 😖");
     }
   };
   xhr.send(JSON.stringify(formData));

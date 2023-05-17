@@ -15,14 +15,14 @@ contactForm.addEventListener("submit", (e) => {
   xhr.onload = function () {
     console.log(xhr.responseText);
     if (xhr.responseText == "success") {
-      alert("Email sent");
+      alert("Your message has been sent 🎉!");
       fname.value = "";
       lname.value = "";
       emaily.value = "";
       message.value = "";
       subject.value = "";
     } else {
-      alert("Something went wrong!");
+      alert("Yowza!! Something went wrong 😖");
     }
   };
 
