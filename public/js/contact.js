@@ -10,7 +10,7 @@ contactForm.addEventListener("submit", (e) => {
     subject: subject.value,
   };
   let xhr = new XMLHttpRequest();
-  xhr.open("POST", "/contact.html");
+  xhr.open("POST", "/contact");
   xhr.setRequestHeader("content-type", "application/json");
   xhr.onload = function () {
     console.log(xhr.responseText);
