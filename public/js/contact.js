@@ -1,6 +1,7 @@
 const contactForm = document.querySelector(".contact-form");
 
 contactForm.addEventListener("submit", (e) => {
+  console.log("clicked");
   e.preventDefault();
   let formData = {
     fname: fname.value,
