@@ -11,7 +11,7 @@ app.use(express.static("public"));
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.sendFile("../public/index.html");
+  res.sendFile("index.html", { root: "public" });
 });
 
 app.post("/contact", (req, res) => {
