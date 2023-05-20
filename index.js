@@ -12,7 +12,7 @@ app.use(express.static("public"));
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.sendFile("./index.html");
+  res.send("HI THERE");
 });
 
 app.post("/contact", (req, res) => {
