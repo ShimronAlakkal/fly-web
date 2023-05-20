@@ -1,6 +1,6 @@
-import express from "express";
-import nodemailer from "nodemailer";
-import dotenv from "dotenv";
+const express = require("express");
+const nodemailer = require("nodemailer");
+const dotenv = require("dotenv");
 
 const app = express();
 
@@ -8,7 +8,7 @@ dotenv.config();
 
 const PORT = process.env.PORT || 5000;
 
-app.use(express.static("./public/"));
+app.use(express.static(__dirname + "/public"));
 app.use(express.json());
 
 app.get("/", (req, res) => {
