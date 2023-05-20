@@ -1,7 +1,8 @@
-const express = require("express");
+import express from "express";
+import nodemailer from "nodemailer";
+import dotenv from "dotenv";
+
 const app = express();
-const nodemailer = require("nodemailer");
-const dotenv = require("dotenv");
 
 dotenv.config();
 
@@ -11,7 +12,7 @@ app.use(express.static("public"));
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.sendFile("./index.html");
+  res.sendFile("../public/index.html");
 });
 
 app.post("/contact", (req, res) => {
